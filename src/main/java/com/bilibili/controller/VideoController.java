@@ -1,4 +1,4 @@
 package com.bilibili.controller;
 
-public class Test {
+public class VideoController {
 }

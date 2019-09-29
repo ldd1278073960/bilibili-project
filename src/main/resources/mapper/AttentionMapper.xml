@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bilibili.mapper.AttentionMapper">
+
+  <resultMap id="BaseResultMap" type="com.bilibili.domain.entity.Attention">
+    <id column="a_id" jdbcType="INTEGER" property="aId" />
+    <result column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="ued_id" jdbcType="INTEGER" property="uedId" />
+    <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
+  </resultMap>
+
+</mapper>

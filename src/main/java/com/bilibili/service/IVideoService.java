@@ -1,4 +1,4 @@
 package com.bilibili.service;
 
-public class Test {
+public interface IVideoService {
 }
