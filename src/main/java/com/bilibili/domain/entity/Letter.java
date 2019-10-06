@@ -1,7 +1,13 @@
 package com.bilibili.domain.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
+/**
+ * @author Administrator
+ */
+@Data
 public class Letter {
     /**
     * 私信表id
@@ -33,51 +39,4 @@ public class Letter {
     */
     private Integer isDelete;
 
-    public Integer getlId() {
-        return lId;
-    }
-
-    public void setlId(Integer lId) {
-        this.lId = lId;
-    }
-
-    public Integer getSendId() {
-        return sendId;
-    }
-
-    public void setSendId(Integer sendId) {
-        this.sendId = sendId;
-    }
-
-    public Integer getReceiveId() {
-        return receiveId;
-    }
-
-    public void setReceiveId(Integer receiveId) {
-        this.receiveId = receiveId;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Date getSendDate() {
-        return sendDate;
-    }
-
-    public void setSendDate(Date sendDate) {
-        this.sendDate = sendDate;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
 }

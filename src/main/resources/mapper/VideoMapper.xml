@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bilibili.mapper.VideoMapper">
-  <resultMap id="BaseResultMap" type="com.bilibili.domain.entity.Video">
+  <resultMap id="BaseResultMap" type="com.bilibili.domain.vo.VideoVo">
     <id column="v_id" jdbcType="INTEGER" property="vId" />
     <result column="u_id" jdbcType="INTEGER" property="uId" />
     <result column="t_id" jdbcType="INTEGER" property="tId" />
@@ -15,5 +15,16 @@
     <result column="collect_num" jdbcType="INTEGER" property="collectNum" />
     <result column="free" jdbcType="INTEGER" property="free" />
   </resultMap>
+
+  <resultMap id="video" type="com.bilibili.domain.vo.VideoVo">
+    <id property="cId" column="c_id"/>
+    <result property="coinNum" column=""/>
+  </resultMap>
+
+    <select id="findByVideo" resultMap="video" >
+
+
+
+    </select>
 
 </mapper>

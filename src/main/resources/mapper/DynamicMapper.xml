@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bilibili.mapper.DynamicMapper">
+  <resultMap id="BaseResultMap" type="com.bilibili.domain.entity.Dynamic">
+    <!--@mbg.generated-->
+    <id column="d_id" jdbcType="INTEGER" property="dId" />
+    <result column="v_id" jdbcType="INTEGER" property="vId" />
+    <result column="s_id" jdbcType="INTEGER" property="sId" />
+    <result column="id_delete" jdbcType="INTEGER" property="idDelete" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    d_id, v_id, s_id, id_delete
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from dynamic
+    where d_id = #{dId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from dynamic
+    where d_id = #{dId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="d_id" keyProperty="dId" parameterType="com.bilibili.domain.entity.Dynamic" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into dynamic (v_id, s_id, id_delete
+      )
+    values (#{vId,jdbcType=INTEGER}, #{sId,jdbcType=INTEGER}, #{idDelete,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="d_id" keyProperty="dId" parameterType="com.bilibili.domain.entity.Dynamic" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into dynamic
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="vId != null">
+        v_id,
+      </if>
+      <if test="sId != null">
+        s_id,
+      </if>
+      <if test="idDelete != null">
+        id_delete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="vId != null">
+        #{vId,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null">
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="idDelete != null">
+        #{idDelete,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bilibili.domain.entity.Dynamic">
+    <!--@mbg.generated-->
+    update dynamic
+    <set>
+      <if test="vId != null">
+        v_id = #{vId,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null">
+        s_id = #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="idDelete != null">
+        id_delete = #{idDelete,jdbcType=INTEGER},
+      </if>
+    </set>
+    where d_id = #{dId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bilibili.domain.entity.Dynamic">
+    <!--@mbg.generated-->
+    update dynamic
+    set v_id = #{vId,jdbcType=INTEGER},
+      s_id = #{sId,jdbcType=INTEGER},
+      id_delete = #{idDelete,jdbcType=INTEGER}
+    where d_id = #{dId,jdbcType=INTEGER}
+  </update>
+</mapper>

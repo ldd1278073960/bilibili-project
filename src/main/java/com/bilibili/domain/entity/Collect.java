@@ -1,7 +1,13 @@
 package com.bilibili.domain.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
+/**
+ * @author Administrator
+ */
+@Data
 public class Collect {
     /**
     * 收藏表id
@@ -28,43 +34,8 @@ public class Collect {
     */
     private Integer isDelete;
 
-    public Integer getcId() {
-        return cId;
-    }
-
-    public void setcId(Integer cId) {
-        this.cId = cId;
-    }
-
-    public Integer getuId() {
-        return uId;
-    }
-
-    public void setuId(Integer uId) {
-        this.uId = uId;
-    }
-
-    public Integer getvId() {
-        return vId;
-    }
-
-    public void setvId(Integer vId) {
-        this.vId = vId;
-    }
-
-    public Date getAddDate() {
-        return addDate;
-    }
-
-    public void setAddDate(Date addDate) {
-        this.addDate = addDate;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
+    /**
+     * 该视频被收藏的数量
+     */
+    private String collectNum;
 }

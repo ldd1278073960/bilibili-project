@@ -1,35 +1,31 @@
 package com.bilibili.domain.entity;
 
+
 import lombok.Data;
 
 /**
  * @author Administrator
  */
 @Data
-public class Point {
+public class Manager {
     /**
-    * 点赞id
+    * 管理员id
     */
-    private Integer pId;
+    private Integer mId;
 
     /**
-    * 用户id
+    * 管理员名
     */
-    private Integer uId;
+    private String mName;
 
     /**
-    * 视频id
+    * 密码
     */
-    private Integer vId;
+    private String password;
 
     /**
     * 是否使用（1为使用，0为删除）
     */
     private Integer isDelete;
-
-    /**
-    * 点赞数量
-    */
-    private Integer pointNum;
 
 }

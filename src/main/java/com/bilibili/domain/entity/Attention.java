@@ -1,5 +1,8 @@
 package com.bilibili.domain.entity;
 
+/**
+ * @author Administrator
+ */
 public class Attention {
     /**
     * 关注表id
