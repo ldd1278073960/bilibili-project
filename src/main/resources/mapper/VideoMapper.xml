@@ -2,29 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bilibili.mapper.VideoMapper">
   <resultMap id="BaseResultMap" type="com.bilibili.domain.vo.VideoVo">
+    <!--@mbg.generated-->
     <id column="v_id" jdbcType="INTEGER" property="vId" />
     <result column="u_id" jdbcType="INTEGER" property="uId" />
-    <result column="t_id" jdbcType="INTEGER" property="tId" />
     <result column="v_name" jdbcType="VARCHAR" property="vName" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="particulars" jdbcType="VARCHAR" property="particulars" />
     <result column="v_img" jdbcType="VARCHAR" property="vImg" />
-    <result column="up_date" jdbcType="DATE" property="upDate" />
-    <result column="c_id" jdbcType="INTEGER" property="cId" />
+    <result column="up_date" jdbcType="TIMESTAMP" property="upDate" />
+    <result column="type" jdbcType="INTEGER" property="type" />
     <result column="point_num" jdbcType="INTEGER" property="pointNum" />
     <result column="coin_num" jdbcType="INTEGER" property="coinNum" />
     <result column="collect_num" jdbcType="INTEGER" property="collectNum" />
-    <result column="free" jdbcType="INTEGER" property="free" />
+    <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
+    <collection property="points" column=""
   </resultMap>
 
-  <resultMap id="video" type="com.bilibili.domain.vo.VideoVo">
-    <id property="cId" column="c_id"/>
-    <result property="coinNum" column=""/>
-  </resultMap>
 
-    <select id="findByVideo" resultMap="video" >
+  <select id="findByVideo" resultType="com.bilibili.domain.entity.Video">
+    
 
-
-
-    </select>
+  </select>
 
 </mapper>

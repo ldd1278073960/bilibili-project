@@ -7,7 +7,7 @@
     <result column="send_id" jdbcType="INTEGER" property="sendId" />
     <result column="receive_id" jdbcType="INTEGER" property="receiveId" />
     <result column="content" jdbcType="VARCHAR" property="content" />
-    <result column="send_date" jdbcType="DATE" property="sendDate" />
+    <result column="send_date" jdbcType="TIMESTAMP" property="sendDate" />
     <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
   </resultMap>
 

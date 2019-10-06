@@ -7,6 +7,10 @@ import com.bilibili.domain.entity.Video;
  */
 public interface VideoMapper {
 
+    /**
+     * 查询视频详情页面的所有信息
+     *
+     * @return
+     */
     Video findByVideo();
-
 }
