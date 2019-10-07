@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bilibili.mapper.CommentMapper">
 
-  <resultMap id="BaseResultMap" type="com.bilibili.domain.entity.Comment">
+  <resultMap id="comment" type="com.bilibili.domain.entity.Comment">
     <id column="c_id" jdbcType="INTEGER" property="cId" />
     <result column="u_id" jdbcType="INTEGER" property="uId" />
     <result column="v_id" jdbcType="INTEGER" property="vId" />
