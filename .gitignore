@@ -28,3 +28,5 @@ index.jsp
 .idea
 bilibili-project.iml
 config
+spring-*.xml
+mybatis-config.xml

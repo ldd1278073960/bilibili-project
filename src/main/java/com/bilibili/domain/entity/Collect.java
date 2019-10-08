@@ -1,10 +1,13 @@
 package com.bilibili.domain.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
 /**
  * @author Administrator
  */
+@Data
 public class Collect {
     /**
      * 收藏表id
@@ -36,51 +39,4 @@ public class Collect {
      */
     private String collectNum;
 
-    public Integer getcId() {
-        return cId;
-    }
-
-    public void setcId(Integer cId) {
-        this.cId = cId;
-    }
-
-    public Integer getuId() {
-        return uId;
-    }
-
-    public void setuId(Integer uId) {
-        this.uId = uId;
-    }
-
-    public Integer getvId() {
-        return vId;
-    }
-
-    public void setvId(Integer vId) {
-        this.vId = vId;
-    }
-
-    public Date getAddDate() {
-        return addDate;
-    }
-
-    public void setAddDate(Date addDate) {
-        this.addDate = addDate;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
-
-    public String getCollectNum() {
-        return collectNum;
-    }
-
-    public void setCollectNum(String collectNum) {
-        this.collectNum = collectNum;
-    }
 }

@@ -1,23 +1,22 @@
 package com.bilibili.domain.vo;
 
-import com.bilibili.domain.entity.Collect;
-import com.bilibili.domain.entity.Comment;
-import com.bilibili.domain.entity.Point;
-import com.bilibili.domain.entity.Video;
+import com.bilibili.domain.entity.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
 /**
  * @author Administrator
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class VideoVo extends Video {
 
     /**
      * 点赞表
      */
-    List<Point> points;
+    Point points;
 
     /**
      * 评论表
@@ -27,5 +26,10 @@ public class VideoVo extends Video {
     /**
      * 收藏表
      */
-    List<Collect> collects;
+    Collect collects;
+
+    /**
+     * 用户表
+     */
+    List<User> users;
 }

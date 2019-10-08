@@ -3,7 +3,7 @@
 <mapper namespace="com.bilibili.mapper.CollectMapper">
 
   <resultMap id="collect" type="com.bilibili.domain.entity.Collect">
-    <id column="c_id" jdbcType="INTEGER" property="cId" />
+    <id column="c_id" jdbcType="INTEGER" property="cId"/>
     <result column="u_id" jdbcType="INTEGER" property="uId" />
     <result column="v_id" jdbcType="INTEGER" property="vId" />
     <result column="add_date" jdbcType="TIMESTAMP" property="addDate" />

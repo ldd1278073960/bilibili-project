@@ -9,6 +9,10 @@ import java.util.List;
  */
 public interface PointMapper {
 
+    /**
+     * 点赞数量
+     * @return 点赞的集合
+     */
     List<Point> findByPoint();
 
 }

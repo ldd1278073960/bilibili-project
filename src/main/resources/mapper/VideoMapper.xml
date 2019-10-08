@@ -2,19 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bilibili.mapper.VideoMapper">
 
-
-  <resultMap id="BaseResultMap" type="com.bilibili.domain.vo.VideoVo">
+  <resultMap id="video" type="com.bilibili.domain.vo.VideoVo">
     <id column="v_id" jdbcType="INTEGER" property="vId" />
-    <result column="u_id" jdbcType="INTEGER" property="uId" />
     <result column="v_name" jdbcType="VARCHAR" property="vName" />
     <result column="particulars" jdbcType="VARCHAR" property="particulars" />
     <result column="v_img" jdbcType="VARCHAR" property="vImg" />
     <result column="up_date" jdbcType="TIMESTAMP" property="upDate" />
     <result column="type" jdbcType="INTEGER" property="type" />
-    <result column="point_num" jdbcType="INTEGER" property="pointNum" />
-    <result column="coin_num" jdbcType="INTEGER" property="coinNum" />
-    <result column="collect_num" jdbcType="INTEGER" property="collectNum" />
-    <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
 
     <collection property="points" resultMap="com.bilibili.mapper.PointMapper.Point"/>
 
@@ -22,14 +16,21 @@
 
     <collection property="comments" resultMap="com.bilibili.mapper.CommentMapper.comment"/>
 
+    <collection property="users" resultMap="com.bilibili.mapper.UserMapper.user"/>
   </resultMap>
 
 
-  <select id="findByVideo" resultMap="BaseResultMap">
-    select
-    from video
-      left join point p on video.v_id = p.v_id
-
+  <select id="findByVideo" resultMap="video">
+    select v.type,v.particulars,v.v_name,v.v_img,v.up_date,p.point_num,
+           c.collect_num,com.content,com.send_date,u.u_img,u.nickname
+    from video v
+      left join point p on v.v_id = p.v_id
+      left join collect c on v.v_id = c.v_id
+    left join comment com on v.v_id = com.v_id
+        left join user u on c.u_id = u.u_id
+    where v.is_delete = 1 and p.is_delete = 1 and
+          c.is_delete = 1 and com.is_delete = 1 and
+          u.is_delete = 1
   </select>
 
 </mapper>

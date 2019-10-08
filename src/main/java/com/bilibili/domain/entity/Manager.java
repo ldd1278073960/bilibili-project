@@ -1,5 +1,11 @@
 package com.bilibili.domain.entity;
 
+import lombok.Data;
+
+/**
+ * @author Administrator
+ */
+@Data
 public class Manager {
     /**
      * 管理员id
@@ -21,35 +27,4 @@ public class Manager {
      */
     private Integer isDelete;
 
-    public Integer getmId() {
-        return mId;
-    }
-
-    public void setmId(Integer mId) {
-        this.mId = mId;
-    }
-
-    public String getmName() {
-        return mName;
-    }
-
-    public void setmName(String mName) {
-        this.mName = mName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
 }

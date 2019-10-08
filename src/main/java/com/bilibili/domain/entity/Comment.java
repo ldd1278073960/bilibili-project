@@ -1,7 +1,13 @@
 package com.bilibili.domain.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
+/**
+ * @author Administrator
+ */
+@Data
 public class Comment {
     /**
      * 评论表id
@@ -33,51 +39,4 @@ public class Comment {
      */
     private Integer isDelete;
 
-    public Integer getcId() {
-        return cId;
-    }
-
-    public void setcId(Integer cId) {
-        this.cId = cId;
-    }
-
-    public Integer getuId() {
-        return uId;
-    }
-
-    public void setuId(Integer uId) {
-        this.uId = uId;
-    }
-
-    public Integer getvId() {
-        return vId;
-    }
-
-    public void setvId(Integer vId) {
-        this.vId = vId;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Date getSendDate() {
-        return sendDate;
-    }
-
-    public void setSendDate(Date sendDate) {
-        this.sendDate = sendDate;
-    }
-
-    public Integer getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
 }
